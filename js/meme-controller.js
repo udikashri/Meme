@@ -48,7 +48,7 @@ function renderModalImgs(sorted) {
     var strHtmls = sortedOrAll.map(function(img) {
         return `
 <div class="img-preview">
-    <img class="card-img" onclick="closeModal(); renderImageInput(${img.id}) "  src="../img/${img.id}.jpg">
+    <img class="card-img" onclick="closeModal(); renderImageInput(${img.id}) "  src="img/${img.id}.jpg">
 </div> 
 `
     })
