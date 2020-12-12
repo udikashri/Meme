@@ -1,10 +1,10 @@
     body {
         margin: 0px;
         padding: 0px;
-        display: flex;
+        /* display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: center; */
     }
     
     .canvas {
@@ -17,11 +17,11 @@
     }
     
     .canvas-container {
-        margin: auto;
+        margin-inline-start: 25vw;
         margin-top: 2vh;
         position: relative;
         border: 0px;
-        width: 30vw;
+        width: 25vw;
         height: 65vh;
     }
     
@@ -93,13 +93,6 @@
         width: 10vw;
     }
     
-    .img-preview {
-        width: 18vw;
-        margin: 10px;
-        text-align: center;
-        padding: 5px;
-    }
-    
     .modal {
         text-align: center;
     }
@@ -164,13 +157,23 @@
             height: 50vw
         }
         .logo {
-            margin-inline-start: 20px;
+            margin-inline-start: 0;
+        }
+        .logo img {
+            width: 18vw;
         }
         .logo-fotter {
-            margin-inline-start: 45vw;
+            margin-inline-start: 40vw;
+        }
+        .main-fotter {
+            height: 10vh;
+        }
+        .logo-fotter img {
+            width: 20vw;
         }
         .nav-tools {
             margin-inline-end: 0;
+            width: 70vw;
         }
         .tools {
             margin: 0;
