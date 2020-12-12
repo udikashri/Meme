@@ -1,15 +1,9 @@
     body {
         margin: 0px;
         padding: 0px;
-        /* display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; */
     }
     
     .canvas {
-        position: absolute;
-        margin: 20px auto;
         margin-top: 0px;
         border: 1px solid black;
         width: 400px;
@@ -17,7 +11,7 @@
     }
     
     .canvas-container {
-        margin-inline-start: 25vw;
+        margin-inline-start: 22vw;
         margin-top: 2vh;
         position: relative;
         border: 0px;
@@ -35,7 +29,7 @@
     .main-nav {
         margin: 0px;
         background-color: #ff7f00;
-        width: 100vw;
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -93,6 +87,13 @@
         width: 10vw;
     }
     
+    .img-preview {
+        width: 18vw;
+        margin: 10px;
+        text-align: center;
+        padding: 5px;
+    }
+    
     .modal {
         text-align: center;
     }
@@ -142,15 +143,11 @@
             display: flex;
             flex-wrap: nowrap;
             flex-direction: column;
+            width: 60vw;
+            margin: auto;
         }
         .gallery-container img {
             width: 50vw;
-        }
-        .logo img {
-            width: 10vw;
-        }
-        .logo-fotter img {
-            width: 10vw;
         }
         .canvas {
             width: 50vw;
@@ -160,13 +157,13 @@
             margin-inline-start: 0;
         }
         .logo img {
-            width: 18vw;
+            width: 15vw;
+        }
+        .main-fotter {
+            height: 20vh;
         }
         .logo-fotter {
             margin-inline-start: 40vw;
-        }
-        .main-fotter {
-            height: 10vh;
         }
         .logo-fotter img {
             width: 20vw;

@@ -230,12 +230,10 @@ function closeModal() {
 
 function searchKeywords(val) {
     var sorted = [];
-    console.log(val);
     gImgs.forEach((img) => {
         img.keywords.forEach((keyword) => {
             if (val.length >= 3) { var checkWord = keyword.includes(val) }
             if (keyword === val || val.includes(keyword) || checkWord) {
-                console.log('hi')
                 sorted.push(img)
             }
         })
