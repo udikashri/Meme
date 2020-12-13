@@ -156,11 +156,11 @@ button label {
         margin: auto;
     }
     .gallery-container img {
-        width: 50vw;
+        width: 60vw;
     }
     .canvas {
-        width: 70vw;
-        height: 70vw
+        width: 60vw;
+        height: 60vw
     }
     .logo {
         margin-inline-start: 0;
@@ -185,14 +185,11 @@ button label {
     .tools {
         margin: 0;
         max-height: 50vh;
+        margin-inline-start: 0;
     }
     .tools img {
         width: 7vw;
         height: 4vh;
-    }
-    .canvas-container {
-        margin-inline-start: 15vw;
-        margin-inline-end: 15vw;
     }
     input {
         width: 30vw;
