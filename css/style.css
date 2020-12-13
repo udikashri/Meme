@@ -111,6 +111,7 @@ form .file-input {
     flex-direction: column;
     flex-wrap: wrap;
     height: 67vh;
+    min-height: 430px;
 }
 
 .tools {
@@ -145,7 +146,7 @@ button label {
     .main-container {
         margin: 0;
         display: block;
-        height: 80vh;
+        min-height: 640px;
     }
     .gallery-container {
         display: flex;
