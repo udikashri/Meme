@@ -85,13 +85,13 @@ var gMeme = {
     lines: [{
         id: 1,
         txt: '',
-        size: 30,
+        size: 40,
         align: 'center',
         color: 'black',
         borderColor: 'black',
         font: 'Ariel',
-        x: 150,
-        y: 30,
+        x: 200,
+        y: 50,
         moveToggle: false
     }]
 }
@@ -107,13 +107,12 @@ function getImages() {
 
 function drawImg(imgId) {
     var img = new Image();
-    img.width = 400
-    img.heigth = 400
     img.src = `img/${imgId}.jpg`;
+    // img.width = 400
+    // img.heigth = 400
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height)
     }
-
     return
 }
 
@@ -127,8 +126,6 @@ function drawText(text, x, y) {
     }
     var img = new Image;
     img.src = `img/${gMeme.selectedImgId}.jpg`;
-    img.width = 400
-    img.heigth = 400
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height)
         drawCharts(x)
@@ -153,31 +150,40 @@ function drawCharts(val) {
 }
 
 function move(ev) {
-
+    var { offsetX, offsetY } = ev;
     if (ev.type === 'mousedown') {
+        document.querySelector('.canvas').onmousemove = `move(${ev})`
+        var clickedLine = gMeme.lines.find(line => {
+            return offsetX >= (line.x - line.size * line.txt.length / 4) && offsetX < (line.x + line.size * line.txt.length / 4) &&
+                offsetY >= (line.y - line.size) && offsetY <= (line.y + gBarHeight + line.size)
+        })
+        if (!clickedLine) {
+            return
+        }
         moveCanvas(ev)
         gMeme.lines[gMeme.selectedLineIdx].moveToggle = true
     }
     if (ev.type === 'mouseup') {
+        document.querySelector('.canvas').onmousemove = ''
         if (!gMeme.lines[gMeme.selectedLineIdx].moveToggle) return
         moveCanvas1(ev, gCoor, )
     }
 
     function moveCanvas(ev) {
-        var x = ev.clientX;
-        var y = ev.clientY;
+        var x = ev.offsetX;
+        var y = ev.offsetY;
         gCoor = [x, y]
         return
     }
 
     function moveCanvas1(ev, ) {
-        var x = ev.clientX;
-        var y = ev.clientY;
+        var x = ev.offsetX;
+        var y = ev.offsetY;
         var moveX = x - gCoor[0]
         var moveY = y - gCoor[1]
         if (gMeme.lines[gMeme.selectedLineIdx].moveToggle) {
-            gMeme.lines[gMeme.selectedLineIdx].x += moveX / 2
-            gMeme.lines[gMeme.selectedLineIdx].y += moveY / 2
+            gMeme.lines[gMeme.selectedLineIdx].x += moveX
+            gMeme.lines[gMeme.selectedLineIdx].y += moveY
         }
         drawText(gMeme.selectedLineIdx.txt)
         gMeme.lines[gMeme.selectedLineIdx].moveToggle = false
@@ -224,7 +230,7 @@ function downloadImg(elLink) {
 
 function closeModal() {
     document.querySelector('.modal').hidden = true
-    document.querySelector('.main-container').style.display = 'flex'
+    document.querySelector('.main-container').style.display = 'block'
     document.querySelector('.main-nav').style.display = 'flex'
 }
 
@@ -266,17 +272,17 @@ function createLine() {
     var id = 2
     var y;
     if (gMeme.selectedLineIdx === 0) {
-        y = 130
-    } else y = 80, ++id
+        y = 350
+    } else y = 200, ++id
     gMeme.lines.push({
         id: id,
         txt: '',
-        size: 30,
+        size: 40,
         align: 'center',
         color: 'black',
         borderColor: 'black',
         font: 'Ariel',
-        x: 150,
+        x: 200,
         y: y
     })
     changeLine()

@@ -1,182 +1,199 @@
-    body {
-        margin: 0px;
-        padding: 0px;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+input,
+select {
+    border-radius: 10em;
+}
+
+form .file-input {
+    border-radius: 0;
+}
+
+.canvas {
+    margin-top: 0px;
+    border: 1px solid black;
+}
+
+.canvas-container {
+    margin-inline-start: 20vw;
+    margin-top: 2vh;
+    position: relative;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-nav {
+    margin: 0px;
+    background-color: #ff7f00;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main-fotter {
+    margin: 0px;
+    background-color: #ff7f00;
+    width: 100%;
+    height: 21.1vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    margin-inline-start: 10rem;
+}
+
+.logo-fotter {
+    margin-inline-start: 45vw;
+}
+
+.nav-tools {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-inline-end: 10rem;
+}
+
+.nav-img {
+    width: 3vw;
+    height: 3vh;
+}
+
+.open-modal {
+    margin-inline-start: 15px;
+}
+
+.card-title {
+    text-transform: capitalize;
+}
+
+.gallery-container img {
+    cursor: pointer;
+    width: 10vw;
+}
+
+.logo img {
+    width: 10vw;
+}
+
+.logo-fotter img {
+    width: 10vw;
+}
+
+.img-preview {
+    width: 18vw;
+    margin: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+.modal {
+    text-align: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 67vh;
+}
+
+.tools {
+    margin: auto;
+    margin-inline-start: 50px;
+    text-align: center;
+}
+
+#text-color {
+    visibility: hidden;
+}
+
+#border-color {
+    visibility: hidden;
+}
+
+.tools img {
+    width: 3vw;
+    height: 3vh;
+}
+
+button {
+    border-radius: 40%;
+    cursor: pointer;
+}
+
+button label {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 452px) {
+    .main-container {
+        margin: 0;
+        display: block;
+        height: 80vh;
     }
-    
-    .canvas {
-        margin-top: 0px;
-        border: 1px solid black;
-        width: 400px;
-        height: 400px
-    }
-    
-    .canvas-container {
-        margin-inline-start: 22vw;
-        margin-top: 2vh;
-        position: relative;
-        border: 0px;
-        width: 25vw;
-        height: 65vh;
-    }
-    
     .gallery-container {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-    }
-    
-    .main-nav {
-        margin: 0px;
-        background-color: #ff7f00;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    
-    .main-fotter {
-        margin: 0px;
-        background-color: #ff7f00;
-        width: 100%;
-        height: 21.1vh;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    
-    .logo {
-        margin-inline-start: 10rem;
-    }
-    
-    .logo-fotter {
-        margin-inline-start: 45vw;
-    }
-    
-    .nav-tools {
-        width: 100vw;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        margin-inline-end: 10rem;
-    }
-    
-    .nav-img {
-        width: 3vw;
-        height: 3vh;
-    }
-    
-    .open-modal {
-        margin-inline-start: 15px;
-    }
-    
-    .card-title {
-        text-transform: capitalize;
-    }
-    
-    .gallery-container img {
-        cursor: pointer;
-        width: 10vw;
-    }
-    
-    .logo img {
-        width: 10vw;
-    }
-    
-    .logo-fotter img {
-        width: 10vw;
-    }
-    
-    .img-preview {
-        width: 18vw;
-        margin: 10px;
-        text-align: center;
-        padding: 5px;
-    }
-    
-    .modal {
-        text-align: center;
-    }
-    
-    .main-container {
-        display: flex;
+        flex-wrap: nowrap;
         flex-direction: column;
-        flex-wrap: wrap;
-        height: 67vh;
-    }
-    
-    .tools {
+        width: 60vw;
         margin: auto;
-        margin-inline-start: 50px;
-        text-align: center;
     }
-    
-    #text-color {
-        visibility: hidden;
+    .gallery-container img {
+        width: 50vw;
     }
-    
-    #border-color {
-        visibility: hidden;
+    .canvas {
+        width: 70vw;
+        height: 70vw
     }
-    
+    .logo {
+        margin-inline-start: 0;
+    }
+    .logo img {
+        width: 25vw;
+    }
+    .main-fotter {
+        height: 20vh;
+    }
+    .logo-fotter {
+        margin-inline-start: 30vw;
+        margin-inline-end: 30vw;
+    }
+    .logo-fotter img {
+        width: 40vw;
+    }
+    .nav-tools {
+        margin-inline-end: 0;
+        width: 70vw;
+    }
+    .tools {
+        margin: 0;
+        max-height: 50vh;
+    }
     .tools img {
-        width: 3vw;
-        height: 3vh;
+        width: 7vw;
+        height: 4vh;
     }
-    
-    button {
-        border-radius: 40%;
-        cursor: pointer;
+    .canvas-container {
+        margin-inline-start: 15vw;
+        margin-inline-end: 15vw;
     }
-    
-    button label {
-        cursor: pointer;
+    input {
+        width: 30vw;
     }
-    
-    @media screen and (max-width: 452px) {
-        .main-container {
-            margin: 0;
-            display: flex;
-            flex-wrap: nowrap;
-        }
-        .gallery-container {
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: column;
-            width: 60vw;
-            margin: auto;
-        }
-        .gallery-container img {
-            width: 50vw;
-        }
-        .canvas {
-            width: 50vw;
-            height: 50vw
-        }
-        .logo {
-            margin-inline-start: 0;
-        }
-        .logo img {
-            width: 15vw;
-        }
-        .main-fotter {
-            height: 20vh;
-        }
-        .logo-fotter {
-            margin-inline-start: 40vw;
-        }
-        .logo-fotter img {
-            width: 20vw;
-        }
-        .nav-tools {
-            margin-inline-end: 0;
-            width: 70vw;
-        }
-        .tools {
-            margin: 0;
-        }
-        body {
-            margin: 0;
-            padding: 0px;
-        }
-    }
+}
