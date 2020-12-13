@@ -4,6 +4,7 @@ var gTxtCanvas
 var gBarHeight = 30
 var gKeywords = { 'happy': 12, 'funny puk': 1 }
 var gCoor;
+var gIsMobile = false
 
 var gImgs = [{
     id: 1,
@@ -230,7 +231,11 @@ function downloadImg(elLink) {
 
 function closeModal() {
     document.querySelector('.modal').hidden = true
-    document.querySelector('.main-container').style.display = 'block'
+    if (document.querySelector('.logo-fotter img').width === 150) {
+        document.querySelector('.main-container').style.display = 'block'
+    } else {
+        document.querySelector('.main-container').style.display = 'flex'
+    }
     document.querySelector('.main-nav').style.display = 'flex'
 }
 

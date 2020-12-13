@@ -3,9 +3,9 @@ var gCanvas;
 var gCtx;
 
 function init() {
+    setCanvas()
     renderImageInput()
     renderModalImgs()
-    setCanvas()
 }
 
 function renderImageInput(val) {
